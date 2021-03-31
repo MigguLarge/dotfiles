@@ -75,6 +75,9 @@ nmap <Leader>w :bd<CR>
 " Colorschemes
 let g:gruvbox_italic=1
 colorscheme wal
+" colorscheme gruvbox
+" colorscheme nord
+" colorscheme dracula
 
 set background=dark
 hi! Normal ctermbg=NONE guibg=NONE

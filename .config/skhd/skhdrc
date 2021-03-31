@@ -1,6 +1,5 @@
 # ################################################################ #
-# THE FOLLOWING IS AN EXPLANATION OF THE GRAMMAR THAT SKHD PARSES. #
-# FOR SIMPLE EXAMPLE MAPPINGS LOOK FURTHER DOWN THIS FILE..        #
+# THE FOLLOWING IS AN EXPLANATION OF THE GRAMMAR THAT SKHD PARSES. # FOR SIMPLE EXAMPLE MAPPINGS LOOK FURTHER DOWN THIS FILE..        #
 # ################################################################ #
 
 # A list of all built-in modifier and literal keywords can
@@ -182,5 +181,6 @@ ctrl - t : yabai -m window --toggle float;\
 
 ctrl + alt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
-ctrl - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
-# ctrl - return : open -a 'kitty'
+# ctrl - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+ctrl - return : open -a 'kitty'
+# ctrl - return : kitty

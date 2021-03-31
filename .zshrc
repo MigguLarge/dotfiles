@@ -127,3 +127,4 @@ alias python='python3'
 
 # neofetch
 alias dotfiles='/usr/bin/git --git-dir=/Users/junhyungchang/.dotfiles/ --work-tree=/Users/junhyungchang'
+pfetch
