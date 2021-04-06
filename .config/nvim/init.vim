@@ -27,6 +27,8 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'arcticicestudio/nord-vim'
 Plug 'joshdick/onedark.vim'
 Plug 'chriskempson/base16-vim'
+Plug 'ayu-theme/ayu-vim'
+Plug 'danilo-augusto/vim-afterglow'
 " Plug 'Valloric/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
@@ -73,16 +75,15 @@ nmap <Leader>[ :bprevious<CR>
 nmap <Leader>w :bd<CR>
 
 " Colorschemes
+set termguicolors
 let g:gruvbox_italic=1
-colorscheme wal
-" colorscheme gruvbox
-" colorscheme nord
-" colorscheme dracula
+let ayucolor="light"
+colorscheme afterglow
 
-set background=dark
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
-autocmd BufEnter * highlight Normal guibg=0
+" set background=dark
+" hi! Normal ctermbg=NONE guibg=NONE
+" hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+" autocmd BufEnter * highlight Normal guibg=0
 
 " Highlighter Settings
 let g:jsx_ext_required = 1

@@ -91,10 +91,10 @@ ctrl + cmd - j : yabai -m window --resize bottom:0:10 ; yabai -m window --resize
 ctrl + cmd - k : yabai -m window --resize top:0:-10 ; yabai -m window --resize bottom:0:-10
 ctrl + cmd - l : yabai -m window --resize right:10:0 ; yabai -m window --resize left:10:0
 
-ctrl + cmd + alt - h : yabai -m window --resize left:-10:0
-ctrl + cmd + alt - j : yabai -m window --resize bottom:0:10
-ctrl + cmd + alt - k : yabai -m window --resize bottom:0:-10
-ctrl + cmd + alt - l : yabai -m window --resize left:10:0
+ctrl + cmd + shift - h : yabai -m window --resize right:-10:0
+ctrl + cmd + shift - j : yabai -m window --resize bottom:0:10
+ctrl + cmd + shift - k : yabai -m window --resize bottom:0:-10
+ctrl + cmd + shift - l : yabai -m window --resize right:10:0
 
 ctrl + alt - h : yabai -m window --move rel:-10:0
 ctrl + alt - j : yabai -m window --move rel:0:10
@@ -184,3 +184,4 @@ ctrl + alt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 # ctrl - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
 ctrl - return : open -a 'kitty'
 # ctrl - return : kitty
+# ctrl - return : open -a 'Alacritty'
