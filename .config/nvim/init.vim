@@ -19,6 +19,9 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.config/nvim/plugged')
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'morhetz/gruvbox'
 Plug 'dylanaraps/wal.vim'
 Plug 'nanotech/jellybeans.vim'
@@ -29,7 +32,10 @@ Plug 'joshdick/onedark.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'danilo-augusto/vim-afterglow'
+Plug 'junegunn/seoul256.vim'
 " Plug 'Valloric/YouCompleteMe'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
 Plug 'preservim/nerdtree'
@@ -63,6 +69,10 @@ Plug 'mxw/vim-jsx'
 
 call plug#end()
 
+" Goyo
+let g:goyo_width='95%'
+let g:goyo_height='95%'
+
 " Emmet
 let g:user_emmet_leader_key=','
 
@@ -73,17 +83,21 @@ nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>] :bnext<CR>
 nmap <Leader>[ :bprevious<CR>
 nmap <Leader>w :bd<CR>
+nmap <Leader>g :Goyo<CR>
 
 " Colorschemes
-set termguicolors
+" set termguicolors
 let g:gruvbox_italic=1
-let ayucolor="light"
-colorscheme afterglow
+colorscheme seoul256
 
-" set background=dark
-" hi! Normal ctermbg=NONE guibg=NONE
-" hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
-" autocmd BufEnter * highlight Normal guibg=0
+" dark mode enabled?
+" if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
+"     colorscheme nord
+" else
+"     colorscheme dim
+" endif
+
+highlight Comment cterm=italic gui=italic
 
 " Highlighter Settings
 let g:jsx_ext_required = 1
@@ -126,20 +140,11 @@ hi User4 ctermfg=239 ctermbg=239 guibg=#4e4e4e guifg=#4e4e4e
 " Prettier and ALE Settings
 let g:prettier#config#config_precedence = 'file-override'
 
-" let g:ale_fixers = {
-" \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-" \   'css': ['prettier'],
-" \   'html': ['prettier'],
-" \   'javascript': ['prettier', 'eslint'],
-" \   'typescript': ['prettier', 'eslint'],
-" \}
-" let g:ale_fix_on_save = 1
-" let g:ale_javascript_prettier_options = '--single-quote --trailing-comma all'
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 let g:prettier#config#single_quote = 'true'
 
-"coc.nvim configs
+" coc.nvim configs
 
 " TextEdit might fail if hidden is not set.
 set hidden
