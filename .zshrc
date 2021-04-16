@@ -25,28 +25,16 @@ source /Users/junhyungchang/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 dark_theme="seoul256"
 light_theme="seoul256-light"
 
-# Commands
-alias light-theme="kitty @ set-colors -a '~/.config/kitty/themes/$light_theme.conf'"
-alias dark-theme="kitty @ set-colors -a '~/.config/kitty/themes/$dark_theme.conf'"
+# Aliases
+# alias light-theme="kitty @ set-colors -a '~/.config/kitty/themes/$light_theme.conf'"
+# alias dark-theme="kitty @ set-colors -a '~/.config/kitty/themes/$dark_theme.conf'"
 alias python='python3'
 alias dotfiles='/usr/bin/git --git-dir=/Users/junhyungchang/.dotfiles/ --work-tree=/Users/junhyungchang'
 
-function kitty-theme() {
-    kitty @ set-colors -a "~/.config/kitty/themes/$1.conf"
-    sed -i '' "2s#.*#include ./themes/$1.conf#" .config/kitty/kitty.conf
-}
-
-function wallpaper() {
-    sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '$1'" && killall Dock 
-}
-
-function alacritty-theme() {
-    sed -i '' "2s#.*#- ~/.config/alacritty/themes/$1.yml#" .config/alacritty/alacritty.yml
-}
-
-function fzfpw() {
-    fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'
-}
+# Commands
+source ~/.config/scripts/kitty-theme
+source ~/.config/scripts/alacritty-theme
+source ~/.config/scripts/fzfpw
 
 # Startup
 

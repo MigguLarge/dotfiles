@@ -33,6 +33,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'danilo-augusto/vim-afterglow'
 Plug 'junegunn/seoul256.vim'
+Plug 'ajmwagar/vim-deus'
 " Plug 'Valloric/YouCompleteMe'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -88,7 +89,7 @@ nmap <Leader>g :Goyo<CR>
 " Colorschemes
 " set termguicolors
 let g:gruvbox_italic=1
-colorscheme seoul256
+colo seoul256
 
 " dark mode enabled?
 " if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
