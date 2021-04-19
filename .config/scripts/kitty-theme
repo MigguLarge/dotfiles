@@ -1,6 +1,12 @@
-#!/usr/bin/env bash
+# !/usr/bin/env bash
 
 function kitty-theme() {
-    kitty @ set-colors -a "~/.config/kitty/themes/$1.conf"
-    sed -i '' "2s#.*#include ./themes/$1.conf#" .config/kitty/kitty.conf
+    if [ $1 = wal ]
+    then
+        kitty @ set-colors -a "~/.cache/wal/colors-kitty.conf"
+        sed -i '' "1s#.*#include ~/.cache/wal/colors-kitty.conf#" ~/.config/kitty/kitty.conf
+    else
+        kitty @ set-colors -a "~/.config/kitty/themes/$1.conf"
+        sed -i '' "1s#.*#include ./themes/$1.conf#" ~/.config/kitty/kitty.conf
+    fi
 }

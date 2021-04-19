@@ -1,4 +1,4 @@
-# if [ "$TMUX" = "" ]; then tmux; fi
+if [ "$TMUX" = "" ]; then exec tmux; fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -19,6 +19,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export TERM=xterm-256color
 source /Users/junhyungchang/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Variables
@@ -32,9 +33,12 @@ alias python='python3'
 alias dotfiles='/usr/bin/git --git-dir=/Users/junhyungchang/.dotfiles/ --work-tree=/Users/junhyungchang'
 
 # Commands
-source ~/.config/scripts/kitty-theme
-source ~/.config/scripts/alacritty-theme
-source ~/.config/scripts/fzfpw
+# source ~/.config/scripts/kitty-theme
+# source ~/.config/scripts/alacritty-theme
+# source ~/.config/scripts/fzfpw
+# source ~/.config/scripts/sd
+# source ~/.config/scripts/frmrf
+for f in ~/.config/scripts/*; do source $f; done
 
 # Startup
 

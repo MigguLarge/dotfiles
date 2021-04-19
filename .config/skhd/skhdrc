@@ -101,7 +101,7 @@ ctrl + alt - j : yabai -m window --move rel:0:10
 ctrl + alt - k : yabai -m window --move rel:0:-10
 ctrl + alt - l : yabai -m window --move rel:10:0
 
-# ctrl - r : yabai -m space --rotate 90
+ctrl + shift + cmd - r : yabai -m space --rotate 90
 
 # ctrl + cmd  -  0x2A : window=$(yabai -m query --windows --window | jq -r '.id') && yabai -m window east --stack $window || (yabai -m window $window --toggle float && yabai -m window $window --toggle float)
 # ctrl + cmd  - return : yabai -m window --focus stack.next || yabai -m window --focus stack.first
@@ -182,7 +182,8 @@ ctrl + shift - t : yabai -m window --toggle float;\
 ctrl + alt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
 # ctrl - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
-ctrl - return : open -a 'kitty'
+# ctrl - return : open -a 'kitty'
 # ctrl - return : open -a 'Alacritty'
 # ctrl - return : kitty
 # ctrl - return : open -a 'Alacritty'
+ctrl - return : open -a 'iTerm'
