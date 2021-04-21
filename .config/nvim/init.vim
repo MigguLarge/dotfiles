@@ -1,4 +1,4 @@
-" Vim-plug
+" Vim-plug :P
 call plug#begin()
 
 Plug 'dracula/vim'
