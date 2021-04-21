@@ -181,9 +181,4 @@ ctrl + shift - t : yabai -m window --toggle float;\
 
 ctrl + alt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
-# ctrl - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
-# ctrl - return : open -a 'kitty'
-# ctrl - return : open -a 'Alacritty'
-# ctrl - return : kitty
-# ctrl - return : open -a 'Alacritty'
-ctrl - return : open -a 'iTerm'
+ctrl - return : open -na 'iTerm'

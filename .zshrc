@@ -8,8 +8,7 @@ export ZSH="/Users/junhyungchang/.oh-my-zsh"
 
 # Zsh style
 ZSH_THEME="typewritten"
-TYPEWRITTEN_SYMBOL="$"
-# TYPEWRITTEN_SYMBOL="􀊄"
+TYPEWRITTEN_SYMBOL="→"
 TYPEWRITTEN_PROMPT_LAYOUT="singleline"
 TYPEWRITTEN_RELATIVE_PATH="adaptive"
 
