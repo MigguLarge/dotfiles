@@ -49,5 +49,4 @@ for f in ~/.config/scripts/*; do source $f; done
 
 neofetch
 
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
