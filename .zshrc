@@ -1,4 +1,6 @@
-if [ "$TMUX" = "" ]; then exec tmux; fi
+# if [ -z "$TMUX" ]; then
+#     tmux attach -t default || tmux new -s default
+# fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -9,7 +11,7 @@ export ZSH="/Users/junhyungchang/.oh-my-zsh"
 # Zsh style
 ZSH_THEME="typewritten"
 TYPEWRITTEN_SYMBOL="→"
-TYPEWRITTEN_PROMPT_LAYOUT="singleline"
+TYPEWRITTEN_PROMPT_LAYOUT="single-line"
 TYPEWRITTEN_RELATIVE_PATH="adaptive"
 
 # IDK
@@ -30,6 +32,7 @@ light_theme="seoul256-light"
 # alias dark-theme="kitty @ set-colors -a '~/.config/kitty/themes/$dark_theme.conf'"
 alias python='python3'
 alias dotfiles='/usr/bin/git --git-dir=/Users/junhyungchang/.dotfiles/ --work-tree=/Users/junhyungchang'
+alias vim='nvim'
 
 # Commands
 # source ~/.config/scripts/kitty-theme
