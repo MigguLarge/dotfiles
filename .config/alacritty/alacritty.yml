@@ -1,0 +1,18 @@
+import:
+    - ~/.config/alacritty/themes/hello.yml
+
+window:
+    padding:
+        x: 16
+        y: 16
+
+    # buttonless, none
+    decorations: buttonless
+
+font:
+    normal:
+        family: FiraCode Nerd Font
+        style: Regular
+    size: 11.0
+
+background_opacity: 1
