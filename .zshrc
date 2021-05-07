@@ -10,7 +10,7 @@ export ZSH="/Users/junhyungchang/.oh-my-zsh"
 
 # Zsh style
 ZSH_THEME="typewritten"
-TYPEWRITTEN_SYMBOL="→"
+TYPEWRITTEN_SYMBOL="λ"
 TYPEWRITTEN_PROMPT_LAYOUT="single-line"
 TYPEWRITTEN_RELATIVE_PATH="adaptive"
 
@@ -22,6 +22,8 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export TERM=xterm-256color
 source /Users/junhyungchang/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Variables
 dark_theme="seoul256"
@@ -41,6 +43,9 @@ alias vim='nvim'
 # source ~/.config/scripts/sd
 # source ~/.config/scripts/frmrf
 for f in ~/.config/scripts/*; do source $f; done
+source ~/.bash_scripts
+source ~/.sh_scripts
+# alias now-playing='~/.config/scripts/now-playing'
 
 # Startup
 
@@ -50,6 +55,7 @@ for f in ~/.config/scripts/*; do source $f; done
 #     kitty-theme polar
 # fi
 
-neofetch
+# neofetch
+# pfetch
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

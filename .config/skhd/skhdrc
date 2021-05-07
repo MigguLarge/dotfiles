@@ -181,4 +181,4 @@ ctrl + shift - t : yabai -m window --toggle float;\
 
 ctrl + alt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
-ctrl - return : open -na 'iTerm'
+ctrl - return : open -na 'Alacritty'
