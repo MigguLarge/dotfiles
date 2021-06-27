@@ -1,0 +1,68 @@
+#!/bin/bash
+
+arr=("One Dark" "Seoul256" "Seoul256 Light" "Amora" "Gruvbox Dark" "Gruvbox Light" "Dracula" "Dracula Recolor" "Palenight" "Horizon Dark" "Hello" "Hello Dark" "Rose Pine")
+str=$(printf '%s\n' "${arr[@]}" | fzf --height 40% --reverse)
+
+if [ "$str" == "One Dark" ]
+then
+  alacritty-theme one_dark
+  nvim-theme onedark
+  nvim-background dark
+elif [ "$str" == "Seoul256" ]
+then
+  alacritty-theme seoul256
+  nvim-theme seoul256
+  nvim-background dark
+elif [ "$str" == "Seoul256 Light" ]
+then
+  alacritty-theme seoul256-light
+  nvim-theme seoul256-light
+  nvim-background light
+elif [ "$str" == "Amora" ]
+then
+  alacritty-theme amora
+  nvim-theme amora
+  nvim-background dark
+elif [ "$str" == "Gruvbox Dark" ]
+then
+  alacritty-theme gruvbox_dark
+  nvim-theme gruvbox
+  nvim-background dark
+elif [ "$str" == "Gruvbox Light" ]
+then
+  alacritty-theme gruvbox_light
+  nvim-theme gruvbox
+  nvim-background light
+elif [ "$str" == "Dracula Recolor" ]
+then
+  alacritty-theme dracula-recolor
+  nvim-theme dracula
+  nvim-background dark
+elif [ "$str" == "Dracula" ]
+then
+  alacritty-theme dracula
+  nvim-theme dracula
+  nvim-background dark
+elif [ "$str" == "Palenight" ]
+then
+  alacritty-theme palenight
+  nvim-theme palenight
+  nvim-background dark
+elif [ "$str" == "Horizon Dark" ]
+then
+  alacritty-theme horizon_dark
+  nvim-theme horizon
+  nvim-background dark
+elif [ "$str" == "Hello" ]
+then
+    alacritty-theme hello
+    nvim-theme dim
+elif [ "$str" == "Hello Dark" ]
+then
+    alacritty-theme hello-dark
+    nvim-theme dim
+elif [ "$str" == "Rose Pine" ]
+then
+    alacritty-theme rose-pine
+    nvim-theme rose-pine
+fi

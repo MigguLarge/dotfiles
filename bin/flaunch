@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# open -a "$(find /Applications -name '*app' | fzf)"
+open -a "$(find /Applications /System/Applications/ /System/Applications/Utilities -name '*app' -maxdepth 1 -exec basename {} .app \; | fzf --query "$1")"

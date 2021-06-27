@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sed -i '' "2s#.*#- ~/.config/alacritty/themes/$1.yml#" ~/.config/alacritty/alacritty.yml

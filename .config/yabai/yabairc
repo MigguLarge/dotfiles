@@ -1,6 +1,5 @@
-#!/usr/bin/env sh 
-# the scripting-addition must be loaded manually if
-# you are running yabai on macOS Big Sur. Uncomment
+#!/usr/bin/env sh
+# the scripting-addition must be loaded manually if you are running yabai on macOS Big Sur. Uncomment
 # the following line to have the injection performed
 # when the config is executed during startup.
 #
@@ -68,14 +67,18 @@ yabai -m rule --add app="^Adobe After Effects 2021$" manage=off
 yabai -m rule --add app="^Adobe Premier Pro 2021" manage=off
 yabai -m rule --add app="^Adobe Illustrator 2021$" manage=off
 yabai -m rule --add app="^Adobe Lightroom$" manage=off
+yabai -m rule --add app="^Installer$" manage=off
+yabai -m rule --add app="^Preview$" manage=off
+yabai -m rule --add app="^Stocks$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  20
-yabai -m config bottom_padding               20
-yabai -m config left_padding                 20
-yabai -m config right_padding                20
-yabai -m config window_gap                   5
+yabai -m config top_padding                  8
+yabai -m config bottom_padding               8
+yabai -m config left_padding                 8
+yabai -m config right_padding                8
+yabai -m config window_gap                   8
 
 source ~/.cache/wal/colors.sh # pywal scheme - update if needed
 

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "$1" == "myeyes" ]
+then
+  sed -i '' "2s#.*#colo dim#" ~/.config/nvim/plugin/colorscheme.vim
+  # sed -i '' "5s#.*#let g:lightline = {'colorscheme': 'myeyes'}#" ~/.config/nvim/plugin/lightlineConfig.vim
+else
+  sed -i '' "2s#.*#colo $1#" ~/.config/nvim/plugin/colorscheme.vim
+  # sed -i '' "5s#.*#let g:lightline = {'colorscheme': '$1'}#" ~/.config/nvim/plugin/lightlineConfig.vim
+fi

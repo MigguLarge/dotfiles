@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [ $(defaults read -g AppleInterfaceStyle) = "Dark" ];
+then
+  alacritty-theme one_dark
+  nvim-theme onedark
+else
+  alacritty-theme seoul256-light
+  nvim-theme seoul256-light
+fi

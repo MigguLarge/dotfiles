@@ -1,28 +1,14 @@
 " Colorscheme
-colo dim
+colo rose-pine
+set background=dark
 
 let g:sierra_Twilight = 1
 let g:palenight_terminal_italics=1
 let g:neodark#background = '#202020'
-hi Normal guibg=NONE ctermbg=NONE
+hi Normal     ctermbg=NONE guibg=NONE
+hi LineNr     ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
 
-" if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
-"     colo onedark
-" else
-"     colo one
-" endif
+set termguicolors
 
-" if (g:colors_name == 'dracula')
-"     highlight Normal guibg=#282828
-" endif
-
-if (g:colors_name isnot 'dim')
-    set termguicolors
-endif
-" set termguicolors
-
-if (g:colors_name == 'one')
-    set background=light
-endif
-
-" highlight Comment cterm=italic gui=italic
+highlight Comment cterm=italic gui=italic

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+nvim $(find $1 -type f | fzfpw)
