@@ -1,5 +1,0 @@
-# !/usr/bin/env bash
-
-function ak-theme() {
-    sed -i '' "2s#.*#- ~/.config/alacritty/themes/$1.yml#" ~/.config/alacritty/alacritty.yml
-}

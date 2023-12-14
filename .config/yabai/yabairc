@@ -56,7 +56,7 @@ yabai -m rule --add app="^Flux$" manage=off
 yabai -m rule --add app="^Time Out$" manage=off
 yabai -m rule --add app="^Logi Options$" manage=off
 # yabai -m rule --add app="^Private Internet Access$" manage=off
-yabai -m rule --add app="^Music$" sticky=on manage=off
+# yabai -m rule --add app="^Music$" sticky=on manage=off
 # yabai -m rule --add app="^Spotify$" sticky=on manage=off
 yabai -m rule --add app="^KakaoTalk$" sticky=on manage=off
 # yabai -m rule --add app="^Discord$" sticky=on manage=off
@@ -71,25 +71,19 @@ yabai -m rule --add app="^Installer$" manage=off
 yabai -m rule --add app="^Preview$" manage=off
 yabai -m rule --add app="^Stocks$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Blender$" manage=off
+yabai -m rule --add app="^UTM$" manage=off
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  8
-yabai -m config bottom_padding               8
-yabai -m config left_padding                 8
-yabai -m config right_padding                8
-yabai -m config window_gap                   8
-
-source ~/.cache/wal/colors.sh # pywal scheme - update if needed
+yabai -m config top_padding                  0
+yabai -m config bottom_padding               0
+yabai -m config left_padding                 0
+yabai -m config right_padding                0
+yabai -m config window_gap                   0
 
 yabai -m config status_bar_background_color  0xff$CBACK
 yabai -m config status_bar_foreground_color  0xff$CFORE
 
 
 echo "yabai configuration loaded.."
-
-# add the following to the end of your yabairc to have it launch automatically when yabai starts.
-# make sure the limelight binary is added somewhere in your $PATH
-
-killall limelight &> /dev/null
-limelight &> /dev/null &

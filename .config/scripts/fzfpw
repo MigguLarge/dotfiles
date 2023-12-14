@@ -1,5 +1,0 @@
-# !/usr/bin/env bash
-
-function fzfpw() {
-    fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'
-}
