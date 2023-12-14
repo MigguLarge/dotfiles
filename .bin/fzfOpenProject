@@ -1,5 +1,5 @@
 #!/bin/bash
-projectPath=$(find $HOME/codes $DOTFILES -type d -maxdepth 2 | fzf-tmux -p 50%)
+projectPath=$(find $HOME/codes $HOME/.config -type d -maxdepth 2 | fzf-tmux -p 50%)
 projectName=$(echo $projectPath | rev | cut -d'/' -f 1 | rev)
 
 if ! tmux has-session -t=$projectName 2> /dev/null; then
