@@ -73,6 +73,7 @@ yabai -m rule --add app="^Stocks$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Blender$" manage=off
 yabai -m rule --add app="^UTM$" manage=off
+yabai -m rule --add app="^Weather$" manage=off
 
 # general space settings
 yabai -m config layout                       bsp

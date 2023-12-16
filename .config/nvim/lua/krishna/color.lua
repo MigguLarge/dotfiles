@@ -3,7 +3,7 @@
 -- 	disable_italics = true
 -- })
 
-vim.g.sonokai_style = "default"
+vim.g.sonokai_style = "shusia"
 vim.cmd('colorscheme sonokai')
 
 -- Make background transparent
