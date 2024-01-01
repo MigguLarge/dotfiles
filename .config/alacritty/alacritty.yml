@@ -1,13 +1,17 @@
 import:
-- ~/.config/alacritty/themes/sonokai_shusia.yml
+- ~/.config/alacritty/themes/rose-pine.yml
 
 window:
-    decorations: none
+    decorations: buttonless
+    padding:
+        x: 5
+        y: 5
+    dynamic_padding: true
 
 font:
     normal:
-        family: JetBrains Mono
-        style: ExtraLight
+        family: JetBrainsMono NF
+        style: Regular
     size: 14.0
 
 env:

@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
-if [ $1 = wal ]
-then
-    kitty @ set-colors -a "~/.cache/wal/colors-kitty.conf"
-    sed -i '' "1s#.*#include ~/.cache/wal/colors-kitty.conf#" ~/.config/kitty/kitty.conf
-else
-    kitty @ set-colors -a "~/.config/kitty/themes/$1.conf"
-    sed -i '' "1s#.*#include ./themes/$1.conf#" ~/.config/kitty/kitty.conf
+kittyConfFile="$HOME/.config/kitty/kitty.conf"
+colorschemeLine=$(awk "/Set-Colorscheme/{ print NR; exit }" $kittyConfFile)
+colorschemeLine=$(($colorschemeLine +1))
+color=$(ls $HOME/.config/kitty/themes | fzf --height 30% --reverse --prompt "Set kitty theme as: ")
+
+if [[ -z $color ]]; then
+    exit 0;
 fi
+
+sed -i '' -e "${colorschemeLine}s|.*|include ./themes/${color}|" $kittyConfFile

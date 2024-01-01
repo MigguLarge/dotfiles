@@ -1,3 +1,12 @@
 #!/usr/bin/env bash
 
-sed -i '' "2s#.*#- ~/.config/alacritty/themes/$1.yml#" ~/.config/alacritty/alacritty.yml
+alacrittyConfig="$HOME/.config/alacritty/alacritty.yml"
+colorschemeLine=2
+color=$(cat ~/.bin/themes/alacritty-themes.txt | fzf --height 30% --reverse --prompt "Select alacritty theme as: ")
+
+if [[ -z $color ]]; then
+	exit 0;
+fi
+
+sed -i '' -e "${colorschemeLine}s#.*#- ~/.config/alacritty/themes/${color}.yml#" $alacrittyConfig
+

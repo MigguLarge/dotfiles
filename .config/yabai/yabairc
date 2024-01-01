@@ -43,6 +43,7 @@ yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            swap
 
 # application settings
+# yabai -m rule --add app=Emacs manage=on
 yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-Elements$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" sticky=on layer=above manage=off
@@ -50,7 +51,7 @@ yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Disk Utility$" sticky=on layer=above manage=off
 yabai -m rule --add app="^System Information$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off
-yabai -m rule --add app="^Dictionary$" manage=off
+# yabai -m rule --add app="^Dictionary$" manage=off
 # yabai -m rule --add app="^iTerm2$" manage=off
 yabai -m rule --add app="^Flux$" manage=off
 yabai -m rule --add app="^Time Out$" manage=off
@@ -58,7 +59,7 @@ yabai -m rule --add app="^Logi Options$" manage=off
 # yabai -m rule --add app="^Private Internet Access$" manage=off
 # yabai -m rule --add app="^Music$" sticky=on manage=off
 # yabai -m rule --add app="^Spotify$" sticky=on manage=off
-yabai -m rule --add app="^KakaoTalk$" sticky=on manage=off
+# yabai -m rule --add app="^KakaoTalk$" sticky=on manage=off
 # yabai -m rule --add app="^Discord$" sticky=on manage=off
 yabai -m rule --add app="^Calendar$" manage=off
 yabai -m rule --add app="^Creative Cloud$" manage=off
@@ -74,14 +75,17 @@ yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Blender$" manage=off
 yabai -m rule --add app="^UTM$" manage=off
 yabai -m rule --add app="^Weather$" manage=off
+yabai -m rule --add app="^Clock$" manage=off
+yabai -m rule --add app="^Godot$" manage=off
+yabai -m rule --add app="^GIMP$" manage=off
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  10
-yabai -m config bottom_padding               10
-yabai -m config left_padding                 10
-yabai -m config right_padding                10
-yabai -m config window_gap                   10
+yabai -m config top_padding                  0
+yabai -m config bottom_padding               0
+yabai -m config left_padding                 0
+yabai -m config right_padding                0
+yabai -m config window_gap                   0
 
 yabai -m config status_bar_background_color  0xff$CBACK
 yabai -m config status_bar_foreground_color  0xff$CFORE

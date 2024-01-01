@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Description: Do a action at chosen brew services
+# Dependencies: brew, fzf
+
+service=$(brew services | awk 'NR>1 { print $1 }' | fzf --height 30% --reverse)
+if [[ -z $service ]]; then
+    exit 0
+fi
+
+action=$(printf 'start\nrestart\nstop\ninfo\nkill' | fzf --height 30% --reverse)
+if [[ -z $action ]]; then
+    exit 0
+fi
+
+brew services $action $service

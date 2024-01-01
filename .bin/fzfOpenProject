@@ -1,6 +1,15 @@
-#!/bin/bash
-projectPath=$(find $HOME/codes $HOME/.config -type d -maxdepth 2 | fzf-tmux -p 50%)
+#!/usr/bin/env bash
+projectPath=$(find $HOME/codes $HOME/.config $HOME/.bin $HOME/godot -type d -maxdepth 2 | fzf-tmux -p 50%)
+
+if [[ -z $projectPath ]]; then
+	exit 0
+fi
+
 projectName=$(echo $projectPath | rev | cut -d'/' -f 1 | rev)
+
+if [[ ${projectName:0:1} == \. ]]; then
+	projectName="${projectName:1}"
+fi
 
 if ! tmux has-session -t=$projectName 2> /dev/null; then
 	tmux new-session -c $projectPath -ds $projectName 

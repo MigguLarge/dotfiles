@@ -49,5 +49,7 @@ ctrl + shift - t : yabai -m window --toggle float;\
           yabai -m window --toggle sticky;\
           yabai -m window --grid 4:4:1:1:2:2
 
-# open terminal
-# ctrl - return : open -na 'Alacritty'
+hyper - return : /opt/homebrew/bin/kitty
+# hyper - f : open -a "/Applications/Firefox.app"
+hyper - e : /opt/homebrew/bin/emacsclient -c -a 'emacs'
+hyper - m : open -a "Music"

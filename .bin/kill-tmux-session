@@ -1,0 +1,26 @@
+#!/bin/bash
+if [ -z "$TMUX" ]; then
+	echo "You are not in tmux session!"
+	exit 1;
+fi
+
+currentSession=$(tmux display-message -p '#S')
+session=$(printf "Current session\nKill all\n%s" "$(tmux ls | cut -d ":" -f 1 | grep -v "$currentSession")" | fzf-tmux -p 50%)
+
+if [[ -z $session ]]; then
+	exit 0;
+fi
+
+if [[ $session == "Current session" ]]; then
+	tmux switch-client -p
+	tmux kill-session -t $currentSession
+	exit 0;
+fi
+
+if [[ $session == "Kill all" ]]; then
+	tmux switch-client -t root
+	tmux ls | cut -d ":" -f 1 | grep -v "root" | xargs -L 1 tmux kill-session -t
+	exit 0;
+fi
+
+tmux kill-session -t $session

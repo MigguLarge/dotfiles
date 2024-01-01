@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+search=$1
+if [[ -z $search ]] then
+   echo "YOU SHOULD GIVE ME WHAT TO SEARCH!"
+   exit 1
+fi
+
+search="${search// /+}"
+echo "Opening https://www.youtube.com/results?search_query=$search..."
+open -u "https://www.youtube.com/results?search_query=$search"

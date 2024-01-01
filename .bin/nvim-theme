@@ -1,10 +1,29 @@
 #!/bin/bash
+#
+#vim.api.nvim_set_option('background', 'light')
 
-if [ "$1" == "myeyes" ]
-then
-  sed -i '' "2s#.*#colo dim#" ~/.config/nvim/plugin/colorscheme.vim
-  # sed -i '' "5s#.*#let g:lightline = {'colorscheme': 'myeyes'}#" ~/.config/nvim/plugin/lightlineConfig.vim
+nvimColorFile="$HOME/.config/nvim/lua/krishna/color.lua"
+colorschemeLine=$(awk "/colorscheme/{ print NR; exit }" $nvimColorFile)
+backgroundLine=$(awk "/Set-nvim-background/{ print NR; exit }" $nvimColorFile)
+backgroundLine=$(($backgroundLine + 1))
+
+color=$(cat ~/.bin/themes/nvim-themes.txt | fzf --height 30% --reverse --prompt "Set neovim theme as: ")
+if [[ -z $color ]]; then
+	exit 0;
+fi
+
+background=$(printf "%s\n" "dark" "light" | fzf --height 30% --reverse --prompt "Set neovim background as: ")
+if [[ -z $background ]]; then
+	exit 0;
+fi
+
+sed -i '' -e "${colorschemeLine}s/.*/vim.cmd('colorscheme ${color}')/" $nvimColorFile
+sed -i '' -e "${backgroundLine}s/.*/vim.api.nvim_set_option('background', '${background}')/" $nvimColorFile
+
+if [[ $color == "sonokai-shusia" ]]; then
+	sonokaiStyleLine=$(awk "/vim.g.sonokai_style/{ print NR; exit }" $nvimColorFile)
+	sed -i '' -e "${colorschemeLine}s/.*/vim.cmd('colorscheme sonokai')/" $nvimColorFile
+	sed -i '' -e "${sonokaiStyleLine}s/.*/vim.g.sonokai_style = 'shusia'/" $nvimColorFile
 else
-  sed -i '' "2s#.*#colo $1#" ~/.config/nvim/plugin/colorscheme.vim
-  # sed -i '' "5s#.*#let g:lightline = {'colorscheme': '$1'}#" ~/.config/nvim/plugin/lightlineConfig.vim
+	sed -i '' -e "${colorschemeLine}s/.*/vim.cmd('colorscheme ${color}')/" $nvimColorFile
 fi
