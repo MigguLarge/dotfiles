@@ -1,3 +1,17 @@
+:: active @
+:: open @
+
+default < f19 ; active
+active, open < f19 ; default
+
+active < o ; open
+
+open < return : /opt/homebrew/bin/kitty
+open < e : /opt/homebrew/bin/emacsclient -c -a 'emacs'
+open < w : open -a "Firefox"
+open < f : open -a "Finder"
+open < m : open -a "Music"
+
 # focus window
 ctrl - h : yabai -m window --focus west
 ctrl - j : yabai -m window --focus south
@@ -48,8 +62,3 @@ ctrl - e : yabai -m window --toggle split
 ctrl + shift - t : yabai -m window --toggle float;\
           yabai -m window --toggle sticky;\
           yabai -m window --grid 4:4:1:1:2:2
-
-hyper - return : /opt/homebrew/bin/kitty
-# hyper - f : open -a "/Applications/Firefox.app"
-hyper - e : /opt/homebrew/bin/emacsclient -c -a 'emacs'
-hyper - m : open -a "Music"

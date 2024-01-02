@@ -43,27 +43,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "manipulators": [
-                            {
-                                "description": "Change caps_lock to command+control+option+shift.",
-                                "from": {
-                                    "key_code": "caps_lock"
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
@@ -243,21 +222,21 @@
             "simple_modifications": [
                 {
                     "from": {
-                        "key_code": "caps_lock"
+                        "key_code": "right_command"
                     },
                     "to": [
                         {
-                            "key_code": "left_control"
+                            "key_code": "f19"
                         }
                     ]
                 },
                 {
                     "from": {
-                        "key_code": "right_command"
+                        "key_code": "caps_lock"
                     },
                     "to": [
                         {
-                            "key_code": "caps_lock"
+                            "key_code": "left_control"
                         }
                     ]
                 }
