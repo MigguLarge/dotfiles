@@ -1,8 +1,8 @@
 # Auto start tmux
-if [ -z "$TMUX" ] && tmux has-session -t=root 2> /dev/null; then
-  tmux a -t root
-elif [ -z "$TMUX" ] && ! tmux has-session -t=root 2> /dev/null; then
-	tmux new -s "root" -c "~"
+if [ -z "$TMUX" ] && tmux ls 2> /dev/null; then
+  tmux a
+elif [ -z "$TMUX" ] && ! tmux ls 2> /dev/null; then
+	tmux new -s "main" -c "$HOME"
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -31,12 +31,13 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 export GOROOT=/usr/local/go
-
 export GOPATH=/Users/junhyungchang/go
+
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.bin:$HOME/.config/emacs/bin:$PATH:$GOPATH/bin:$GOROOT/bin"
 
 export TERM=xterm-256color
 source /Users/junhyungchang/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
@@ -44,7 +45,9 @@ export DOTFILES="$HOME/dotfiles2/dotfile"
 
 export PAGER=bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" # Changes manpage reader to bat
-export BAT_THEME='gruvbox-dark'
+export BAT_THEME='Solarized (light)'
+
+export EDITOR="emacsclient -c -a 'emacs'"
 
 # Variables
 dark_theme="seoul256"

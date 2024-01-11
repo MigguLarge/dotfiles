@@ -1,16 +1,26 @@
 :: active @
 :: open @
+:: messenger @
+:: script @
 
 default < f19 ; active
-active, open < f19 ; default
+active, open, messenger, script < f19 ; default
 
 active < o ; open
+active < s ; script
+
+open < m ; messenger
 
 open < return : /opt/homebrew/bin/kitty
 open < e : /opt/homebrew/bin/emacsclient -c -a 'emacs'
-open < w : open -a "Firefox"
+open < w : open -a "Arc"
 open < f : open -a "Finder"
 open < m : open -a "Music"
+
+messenger < k : open -a "KakaoTalk"
+messenger < w : open -a "WhatsApp"
+
+script < t : /opt/homebrew/bin/kitty -e set-theme
 
 # focus window
 ctrl - h : yabai -m window --focus west

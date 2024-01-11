@@ -10,7 +10,7 @@ vim.opt.termguicolors=true -- Term Gui
 -- Set-nvim-background
 vim.api.nvim_set_option('background', 'dark')
 
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme onedark')
 
 -- Make background transparent
 -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })

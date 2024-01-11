@@ -33,7 +33,7 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;; Load a theme
-(setq doom-theme 'doom-gruvbox)
+(setq doom-theme 'doom-solarized-light)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -80,6 +80,8 @@
 (define-key evil-insert-state-map (kbd "C-c") 'evil-normal-state)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
+(setq js-indent-level 4)
 (setq indent-line-function 'insert-tab)
 (setq calendar-week-start-day 0) ;; Set monday as start of the week
 (setq org-agenda-files '("~/org-agenda/agenda.org"))
+(setq company-idle-delay 0)

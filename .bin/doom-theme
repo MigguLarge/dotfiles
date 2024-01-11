@@ -4,7 +4,7 @@ configel="$HOME/.config/doom/config.el"
 colorschemeLine=$(awk "/;; Load a theme/{ print NR; exit }" $configel)
 colorschemeLine=$(($colorschemeLine + 1))
 # ls ~/.config/doom/themes | sed "s/-theme.el//"
-color=$(printf "%s\n" $(cat $HOME/.bin/themes/doom-themes.txt) $(ls ~/.config/doom/themes | sed "s/-theme.el//") | fzf --height 30% --reverse --prompt "Set doom theme as: ")
+color=$(printf "%s\n" $(cat $HOME/.bin/themes/doom-themes.txt) $(ls ~/.config/doom/themes | sed "s/-theme.el//") | sort | fzf --height 30% --reverse --prompt "Set doom theme as: ")
 if [[ -z $color ]]; then
 	exit 0;
 fi

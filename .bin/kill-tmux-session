@@ -5,7 +5,7 @@ if [ -z "$TMUX" ]; then
 fi
 
 currentSession=$(tmux display-message -p '#S')
-session=$(printf "Current session\nKill all\n%s" "$(tmux ls | cut -d ":" -f 1 | grep -v "$currentSession")" | fzf-tmux -p 50%)
+session=$(printf "Current session\nKill all\n%s" "$(tmux ls | cut -d ":" -f 1 | grep -v "$currentSession")" | fzf-tmux -p 90%)
 
 if [[ -z $session ]]; then
 	exit 0;
@@ -18,8 +18,8 @@ if [[ $session == "Current session" ]]; then
 fi
 
 if [[ $session == "Kill all" ]]; then
-	tmux switch-client -t root
-	tmux ls | cut -d ":" -f 1 | grep -v "root" | xargs -L 1 tmux kill-session -t
+	tmux switch-client -t main
+	tmux ls | cut -d ":" -f 1 | grep -v "main" | xargs -L 1 tmux kill-session -t
 	exit 0;
 fi
 
