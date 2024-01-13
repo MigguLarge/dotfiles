@@ -59,6 +59,8 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias vim='nvim'
 alias emacs="emacsclient -c -a 'emacs'"
 alias ls="lsd --group-directories-first"
+alias yr="yabai --restart-service"
+alias sr="skhd --restart-service"
 
 # Startup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
