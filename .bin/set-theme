@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-doom-theme
+nvim-theme
 kitty-theme
 bat-theme

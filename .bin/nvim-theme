@@ -7,7 +7,7 @@ colorschemeLine=$(awk "/colorscheme/{ print NR; exit }" $nvimColorFile)
 backgroundLine=$(awk "/Set-nvim-background/{ print NR; exit }" $nvimColorFile)
 backgroundLine=$(($backgroundLine + 1))
 
-color=$(cat ~/.bin/themes/nvim-themes.txt | fzf --height 30% --reverse --prompt "Set neovim theme as: ")
+color=$(sort ~/.bin/themes/nvim-themes.txt | fzf --height 30% --reverse --prompt "Set neovim theme as: ")
 if [[ -z $color ]]; then
 	exit 0;
 fi

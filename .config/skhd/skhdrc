@@ -1,3 +1,4 @@
+# Keychords
 :: active @
 :: open @
 :: messenger @
@@ -17,11 +18,13 @@ open < w : open -a "Arc"
 open < f : open -a "Finder"
 open < m : open -a "Music"
 open < p : open -a "Photos"
+open < d : open -a "Dictionary"
 
 messenger < k : open -a "KakaoTalk"
 messenger < w : open -a "WhatsApp"
 
 script < t : /opt/homebrew/bin/kitty -e set-theme
+script < l : shortcuts run 'Toggle Light'
 
 # focus window
 ctrl - h : yabai -m window --focus west

@@ -47,7 +47,8 @@ export PAGER=bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" # Changes manpage reader to bat
 export BAT_THEME='Solarized (light)'
 
-export EDITOR="emacsclient -c -a 'emacs'"
+# export EDITOR="emacsclient -c -a 'emacs'"
+export EDITOR="nvim"
 
 # Variables
 dark_theme="seoul256"
@@ -61,6 +62,7 @@ alias emacs="emacsclient -c -a 'emacs'"
 alias ls="lsd --group-directories-first"
 alias yr="yabai --restart-service"
 alias sr="skhd --restart-service"
+alias rm="rm -I"
 
 # Startup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
