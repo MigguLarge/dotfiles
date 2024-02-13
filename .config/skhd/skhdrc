@@ -1,16 +1,13 @@
 # Keychords
 :: active @
 :: open @
-:: messenger @
 :: script @
 
 default < f19 ; active
-active, open, messenger, script < f19 ; default
+active, open, script < f19 ; default
 
 active < o ; open
 active < s ; script
-
-open < shift - m ; messenger
 
 open < return : /opt/homebrew/bin/kitty
 open < e : /opt/homebrew/bin/emacsclient -c -a 'emacs'
@@ -19,9 +16,8 @@ open < f : open -a "Finder"
 open < m : open -a "Music"
 open < p : open -a "Photos"
 open < d : open -a "Dictionary"
-
-messenger < k : open -a "KakaoTalk"
-messenger < w : open -a "WhatsApp"
+open < k : open -a "KakaoTalk"
+open < shift - w : open -a "WhatsApp"
 
 script < t : /opt/homebrew/bin/kitty -e set-theme
 script < l : shortcuts run 'Toggle Light'

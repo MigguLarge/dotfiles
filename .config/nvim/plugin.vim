@@ -18,11 +18,15 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
 
+" Pretty stuff
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+
 " Other Plugins
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
 Plug 'ThePrimeagen/harpoon'
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'preservim/nerdtree'
+Plug 'stevearc/oil.nvim'
 call plug#end()
