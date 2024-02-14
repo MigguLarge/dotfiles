@@ -9,14 +9,19 @@ Plug 'joshdick/onedark.vim'
 Plug 'jeffkreeftmeijer/vim-dim'
 Plug 'shaunsingh/solarized.nvim'
 
-" Lsp and autocompletion
+" Lsp
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
+
+" Autocompletion
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'L3MON4D3/LuaSnip'
+
+" Formatter
+Plug 'mhartington/formatter.nvim'
 
 " Pretty stuff
 Plug 'nvim-lualine/lualine.nvim'
