@@ -9,9 +9,10 @@ active, open, script < f19 ; default
 active < o ; open
 active < s ; script
 
-open < return : /opt/homebrew/bin/kitty
+# open < return : /opt/homebrew/bin/kitty
+open < return : open -a "Kitty"
 open < e : /opt/homebrew/bin/emacsclient -c -a 'emacs'
-open < w : open -a "Arc"
+open < w : open -a "Firefox"
 open < f : open -a "Finder"
 open < m : open -a "Music"
 open < p : open -a "Photos"
@@ -19,7 +20,6 @@ open < d : open -a "Dictionary"
 open < k : open -a "KakaoTalk"
 open < shift - w : open -a "WhatsApp"
 
-script < t : /opt/homebrew/bin/kitty -e set-theme
 script < l : shortcuts run 'Toggle Light'
 
 # focus window

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-projectPath=$(find $HOME/codes $HOME/.config $HOME/.bin $HOME/godot -type d -maxdepth 2 | fzf-tmux -p 90%)
+projectPath=$(find $HOME/codes $HOME/.config $HOME/.bin $HOME/godot $HOME/Documents/neorg $HOME/Documents/org -type d -maxdepth 2 | fzf-tmux -p 90%)
 
 if [[ -z $projectPath ]]; then
 	exit 0

@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 zshrc="$HOME/.zshrc"
-colorschemeLine=$(awk "/BAT_THEME/{ print NR; exit }" $zshrc)
-color=$(cat ~/.bin/themes/bat-themes.txt | fzf --height 50% --reverse --prompt "Select bat theme as: ")
+colorschemeLine=$(awk "/BAT_THEME/{ print NR; exit }" "$zshrc")
+color=$(fzf --height 50% --reverse --prompt "Select bat theme as: " < "$HOME/.bin/themes/bat-themes.txt")
 
 if [[ -z $color ]]; then
 	exit 0;
 fi
 
-sed -i '' -e "${colorschemeLine}s/.*/export BAT_THEME='${color}'/" $zshrc
+sed -i '' -e "${colorschemeLine}s/.*/export BAT_THEME='${color}'/" "$zshrc"
 echo "Please source .zshrc file"

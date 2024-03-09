@@ -26,6 +26,14 @@ require('lualine').setup {
     lualine_y = {'progress'},
     lualine_z = {{'location', separator = {left='', right=''}}}
   },
+  -- sections = {
+  --   lualine_a = {{'mode', separator = {left='', right=''}}},
+  --   lualine_b = {'branch'},
+  --   lualine_c = {'filename'},
+  --   lualine_x = {},
+  --   lualine_y = {},
+  --   lualine_z = {}
+  -- },
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},

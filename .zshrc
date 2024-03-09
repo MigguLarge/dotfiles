@@ -45,7 +45,7 @@ export DOTFILES="$HOME/dotfiles2/dotfile"
 
 export PAGER=bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" # Changes manpage reader to bat
-export BAT_THEME='Solarized (light)'
+export BAT_THEME='GitHub'
 
 # export EDITOR="emacsclient -c -a 'emacs'"
 export EDITOR="nvim"

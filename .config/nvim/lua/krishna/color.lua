@@ -1,5 +1,6 @@
 require('rose-pine').setup({
-	disable_italics = true
+	disable_italics = true,
+	disable_backgruond = true
 })
 
 vim.g.sonokai_style = 'shusia'
@@ -10,8 +11,8 @@ vim.opt.termguicolors=true -- Term Gui
 -- Set-nvim-background
 vim.api.nvim_set_option('background', 'light')
 
-vim.cmd('colorscheme rose-pine-dawn')
+vim.cmd('colorscheme github_light')
 
 -- Make background transparent
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
--- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })

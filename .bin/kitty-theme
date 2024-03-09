@@ -1,12 +1,25 @@
 #!/usr/bin/env bash
 
 kittyConfFile="$HOME/.config/kitty/kitty.conf"
-colorschemeLine=$(awk "/Set-Colorscheme/{ print NR; exit }" $kittyConfFile)
-colorschemeLine=$(($colorschemeLine +1))
-color=$(ls $HOME/.config/kitty/themes | fzf --height 30% --reverse --prompt "Set kitty theme as: ")
+colorschemeLine=$(awk "/Set-Colorscheme/{ print NR; exit }" "$kittyConfFile")
+colorschemeLine=$((colorschemeLine + 1))
+backgruondLine=$((colorschemeLine + 1))
+color=$(find "$HOME/.config/kitty/themes" -maxdepth 1 -type f -exec basename -s ".conf" {} \; | fzf --height 30% --reverse --prompt "Set kitty theme as: ")
+background=$(printf "Dark\nLight" | fzf --height 30% --reverse --prompt "Set kitty background as: ")
 
 if [[ -z $color ]]; then
     exit 0;
 fi
 
-sed -i '' -e "${colorschemeLine}s|.*|include ./themes/${color}|" $kittyConfFile
+sed -i '' -e "${colorschemeLine}s|.*|include ./themes/${color}.conf|" "$kittyConfFile"
+
+if [[ "$background" == "Dark" ]]; then
+	sed -i '' -e "${backgruondLine}s|.*|include ./dark_background.conf|" "$kittyConfFile"
+	exit 0;
+elif [[ "$background" == "Light" ]]; then
+	sed -i '' -e "${backgruondLine}s|.*|include ./light_background.conf|" "$kittyConfFile"
+	exit 0;
+fi
+
+exit 0;
+ 

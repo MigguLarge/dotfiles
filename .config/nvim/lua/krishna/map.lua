@@ -1,5 +1,6 @@
 -- vim
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ','
 vim.keymap.set('n', '<Leader>b[', '<cmd>bprev<cr>')
 vim.keymap.set('n', '<Leader>b]', '<cmd>bnext<cr>')
 vim.keymap.set('n', '<Leader>bd', '<cmd>bdelete<cr>')
