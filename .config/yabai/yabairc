@@ -82,11 +82,11 @@ yabai -m rule --add app="^Stats$" manage=off
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  0
-yabai -m config bottom_padding               0
-yabai -m config left_padding                 0
-yabai -m config right_padding                0
-yabai -m config window_gap                   0
+yabai -m config top_padding                  5
+yabai -m config bottom_padding               5
+yabai -m config left_padding                 5
+yabai -m config right_padding                5
+yabai -m config window_gap                   5
 
 yabai -m config status_bar_background_color  0xff$CBACK
 yabai -m config status_bar_foreground_color  0xff$CFORE
