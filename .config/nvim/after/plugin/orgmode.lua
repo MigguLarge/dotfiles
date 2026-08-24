@@ -1,5 +1,3 @@
-require("orgmode").setup_ts_grammar()
-
 require("orgmode").setup({
 	org_startup_folded = "showeverything",
 	org_adapt_indentation = false,

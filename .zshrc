@@ -30,8 +30,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export GOROOT=/usr/local/go
-export GOPATH=/Users/junhyungchang/go
+#export GOROOT="/opt/homebrew/Cellar/go/1.22.5"
+#export GOPATH=/Users/junhyungchang/go
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.bin:$HOME/.config/emacs/bin:$PATH:$GOPATH/bin:$GOROOT/bin"
 
@@ -45,7 +45,7 @@ export DOTFILES="$HOME/dotfiles2/dotfile"
 
 export PAGER=bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'" # Changes manpage reader to bat
-export BAT_THEME='GitHub'
+export BAT_THEME='gruvbox-dark'
 
 # export EDITOR="emacsclient -c -a 'emacs'"
 export EDITOR="nvim"

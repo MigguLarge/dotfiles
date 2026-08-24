@@ -23,6 +23,12 @@ require("mason-lspconfig").setup_handlers({
 			},
 		})
 	end,
+	["texlab"] = function()
+		require("lspconfig").texlab.setup({
+			capabilities = capabilities, -- Setup autocompletion for all lang
+			filetypes = { "tex", "plaintex", "bib", "markdown" }
+		})
+	end,
 })
 
 -- Autocompletion setup

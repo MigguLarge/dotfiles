@@ -13,7 +13,7 @@ fi
 
 if [[ $session == "Current session" ]]; then
 	tmux switch-client -p
-	tmux kill-session -t $currentSession
+	tmux kill-session -t "$currentSession"
 	exit 0;
 fi
 
@@ -23,4 +23,4 @@ if [[ $session == "Kill all" ]]; then
 	exit 0;
 fi
 
-tmux kill-session -t $session
+tmux kill-session -t "$session"

@@ -18,6 +18,7 @@ open < m : open -a "Music"
 open < p : open -a "Photos"
 open < d : open -a "Dictionary"
 open < k : open -a "KakaoTalk"
+open < o : open -a "Obsidian"
 open < shift - w : open -a "WhatsApp"
 
 script < l : shortcuts run 'Toggle Light'
