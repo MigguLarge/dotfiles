@@ -33,7 +33,7 @@ source $ZSH/oh-my-zsh.sh
 #export GOROOT="/opt/homebrew/Cellar/go/1.22.5"
 #export GOPATH=/Users/junhyungchang/go
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.bin:$HOME/.config/emacs/bin:$PATH:$GOPATH/bin:$GOROOT/bin"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$HOME/.bin:$HOME/.config/emacs/bin:$PATH:$(go env GOPATH)/bin:$GOROOT/bin"
 
 export TERM=xterm-256color
 source /Users/junhyungchang/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
